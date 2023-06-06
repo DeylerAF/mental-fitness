@@ -1,12 +1,13 @@
+/* Estilos para el header */
 header{
     position: absolute;
     width: -webkit-fill-available;
-    /* min-width: 280px; */
     height: 70px;
-    background: #ffffff80;
+    background: var(--background-color-semi-transparent);
     z-index: 100;
 }
 
+/* Estilos para el contenido del header */
 .header{
     position: relative;
     width: 100%;
@@ -15,17 +16,20 @@ header{
     align-items: center;
 }
 
+/* Estilos para el logo en el header */
 .header .logo {
     width: 60px;
     padding: 1rem;
 }
 
+/* Estilos para el header en pantallas pequeñas */
 @media only screen and (max-width: 768px){
     .header.active {
         background: var(--background-color);
     }
 }
 
+/* Estilos para el header en pantallas muy pequeñas */
 @media only screen and (max-width: 320px){
     header {
         height: 50px;
@@ -36,6 +40,7 @@ header{
     }
 }
 
+/* Estilos para la ubicación */
 .ubicacion {
     height: 0px;
     position: absolute;
@@ -49,14 +54,18 @@ header{
     transition: 0.2s;
     overflow: hidden;
 }
+
+/* Estilos para la ubicación activa */
 .ubicacion.active {
     height: auto;
 }
 
+/* Estilos para las redes sociales en la ubicación */
 .ubicacion .redes img{
     margin: 1rem;
 }
 
+/* Estilos para el mapa en la ubicación */
 .ubicacion .mapa{
     width: 100%;
     max-width: 1200px;
@@ -64,11 +73,13 @@ header{
     padding: 0 1rem;
 }
 
+/* Estilos para la imagen del mapa en la ubicación */
 .ubicacion .mapa img{
     width: 100%;
     height: 100%;
 }
 
+/* Estilos para la información de contacto en el header */
 .info-contacto-header a {
     color: var(--background-color);
     text-align: center;
@@ -79,6 +90,7 @@ header{
     text-align: center;
 }
 
+/* Estilos para la ubicación en pantallas pequeñas */
 @media only screen and (max-width: 768px){
     .ubicacion {
         top: 370px;
@@ -86,6 +98,7 @@ header{
     }
 }
 
+/* Estilos para la ubicación en pantallas muy pequeñas */
 @media only screen and (max-width: 320px){
     .ubicacion {
         top: 350px;
@@ -93,6 +106,7 @@ header{
     }
 }
 
+/* Estilos para la barra de navegación */
 .nav-bar ul {
     display: flex;
 }
@@ -101,6 +115,7 @@ header{
     list-style: none;
 }
 
+/* Estilos para los enlaces en la barra de navegación */
 .nav-bar ul li a {
     display: flex;
     cursor: pointer;
@@ -115,20 +130,24 @@ header{
     margin: 0 5px;
 }
 
+/* Estilos para los enlaces en la barra de navegación al pasar el mouse */
 .nav-bar ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Estilos para el enlace activo en la barra de navegación */
 .nav-bar ul li a.active {
     color: var(--color);
     background: var(--background-color);
 }
 
+/* Estilos para la cruz en la barra de navegación */
 .cross {
     cursor: pointer;
     padding: 1rem;
 }
 
+/* Estilos para las líneas de la cruz en la barra de navegación */
 .cross .line {
     width: 30px;
     height: 5px;
@@ -136,15 +155,19 @@ header{
     margin: 5px 0;
 }
 
+/* Estilos para la segunda línea de la cruz en la barra de navegación */
 .cross .line:nth-child(2) {
     transform: rotate(90deg) translate(-10px, 0);
     transition: ease-in-out 0.3s;
 }
 
+/* Estilos para la segunda línea de la cruz en la barra de navegación activa */
 .cross.active .line:nth-child(2) {
     transform: rotate(0deg) translate(0, -10px);
     transition: ease-in-out 0.3s;
 }
+
+/* Estilos para la cruz en pantallas muy pequeñas */
 @media only screen and (max-width: 320px){
     .cross .line {
         width: 15px;
@@ -159,6 +182,7 @@ header{
     }
 }
 
+/* Estilos para la barra de navegación en pantallas pequeñas */
 @media only screen and (max-width: 768px) {
 
     .nav-bar {
@@ -196,6 +220,7 @@ header{
     }
 }
 
+/* Estilos para la barra de navegación en pantallas muy pequeñas */
 @media only screen and (max-width: 320px){
     .nav-bar{
         top: 50px;

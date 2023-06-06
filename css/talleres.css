@@ -1,41 +1,50 @@
+/* Estilos para el contenedor de los talleres */
 .talleres {
     margin: 1.5rem;
 }
 
+/* Estilos para la información de los talleres */
 .talleres-info {
     margin: 1rem 0;
     text-align: center;
 }
 
+/* Estilos para los párrafos dentro de la información de los talleres */
 .talleres-info p {
     color: var(--primary-color);
     font-size: var(--xx-small-font-size);
 }
 
+/* Estilos para el grid que contiene los talleres */
 .grid-talleres {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
+/* Estilos para el grid de los talleres en pantallas con ancho máximo de 900px */
 @media screen and (max-width: 900px) {
     .grid-talleres {
         grid-template-columns: repeat(2, minmax(auto , 1fr));
     }
+    /* Estilos para el tercer taller en el grid */
     .grid-talleres .taller:nth-child(3) {
         grid-column: span 2;
         display: flex;
         flex-direction: row;
     }
+    /* Estilos para la imagen dentro del tercer taller en el grid */
     .grid-talleres .taller:nth-child(3) img{
         width: 100%;
         height: 100%;
     }
 }
 
+/* Estilos para el grid de los talleres en pantallas con ancho máximo de 540px */
 @media screen and (max-width: 540px) {
     .grid-talleres {
         grid-template-columns: repeat(1, minmax(auto , 1fr));
     }
+    /* Estilos para los tres primeros talleres en el grid */
     .grid-talleres .taller:nth-child(1),
     .grid-talleres .taller:nth-child(2),
     .grid-talleres .taller:nth-child(3) {
@@ -44,6 +53,7 @@
     }
 }
 
+/* Estilos para cada taller */
 .taller {
     display: flex;
     flex-direction: column;
@@ -54,12 +64,14 @@
     transition: all 0.3s ease-in-out;
 }
 
+/* Estilos para cada taller al pasar el mouse por encima */
 .taller:hover {
     transform: scale(1.02);
     transition: all 0.3s ease-in-out;
     background-color: var(--font-color-semi-transparent);
 }
 
+/* Estilos para la información dentro de cada taller */
 .taller .taller-info {
     width: 100%;
     height: 100%;
@@ -67,20 +79,24 @@
     color: var(--font-color);
 }
 
+/* Estilos para los títulos dentro de la información de cada taller */
 .taller .taller-info h3, h4{
     text-align: center;
     color: var(--font-color);
 }
 
+/* Estilos para los objetivos dentro de la información de cada taller */
 .taller .taller-info .objetivos {
     font-size: var(--x-small-font-size);
     font-weight: var(--bold-font-weight);
 }
 
+/* Estilos para la población dentro de la información de cada taller */
 .taller .taller-info .poblacion{
     font-size: var(--xx-small-font-size);
 }
 
+/* Estilos para la figura dentro de cada taller */
 .taller figure {
     display: flex;
     align-items: end;
@@ -88,6 +104,7 @@
     height: 100%;
 }
 
+/* Estilos para la imagen dentro de cada taller */
 .taller img {
     width: 100%;
     height: auto;

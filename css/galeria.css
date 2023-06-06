@@ -1,38 +1,48 @@
+/* Estilos para la sección "Nosotros" */
 .nosotros {
     background: var(--secondary-color);
     text-align: center;
 }
 
+/* Estilos para la galería de imágenes */
 .grid-galeria {
     padding: 2rem;
-    grid-template-columns: repeat(4, minmax(auto , 1fr));
-    grid-auto-rows: minmax(auto, 300px);
+    grid-template-columns: repeat(4, minmax(auto , 1fr)); /* 4 columnas con ancho automático */
+    grid-auto-rows: minmax(auto, 300px); /* Altura automática con mínimo de 300px */
 }
+
+/* Media query para pantallas de hasta 900px de ancho */
 @media screen and (max-width: 900px) {
     .grid-galeria {
-        grid-template-columns: repeat(3, minmax(auto , 1fr));
-        grid-auto-rows: minmax(auto, 250px);
-    }
-}
-@media screen and (max-width: 480px) {
-    .grid-galeria {
-        grid-template-columns: repeat(2, minmax(auto , 1fr));
-        grid-auto-rows: minmax(auto, 200px);
-    }
-}
-@media screen and (max-width: 320px) {
-    .grid-galeria {
-        grid-template-columns: repeat(1, minmax(auto , 1fr));
-        grid-auto-rows: minmax(auto, 150px);
+        grid-template-columns: repeat(3, minmax(auto , 1fr)); /* 3 columnas con ancho automático */
+        grid-auto-rows: minmax(auto, 250px); /* Altura automática con mínimo de 250px */
     }
 }
 
+/* Media query para pantallas de hasta 480px de ancho */
+@media screen and (max-width: 480px) {
+    .grid-galeria {
+        grid-template-columns: repeat(2, minmax(auto , 1fr)); /* 2 columnas con ancho automático */
+        grid-auto-rows: minmax(auto, 200px); /* Altura automática con mínimo de 200px */
+    }
+}
+
+/* Media query para pantallas de hasta 320px de ancho */
+@media screen and (max-width: 320px) {
+    .grid-galeria {
+        grid-template-columns: repeat(1, minmax(auto , 1fr)); /* 1 columna con ancho automático */
+        grid-auto-rows: minmax(auto, 150px); /* Altura automática con mínimo de 150px */
+    }
+}
+
+/* Estilos para cada figura de la galería */
 .grid-galeria figure {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
+/* Estilos para el efecto hover de cada figura */
 .grid-galeria figure:hover::before {
     position: absolute;
     content: "MÁS";
@@ -45,6 +55,7 @@
     color: #fff;
 }
 
+/* Estilos para la imagen dentro de cada figura */
 .grid-galeria figure img{
     width: 100%;
     height: 100%;
@@ -52,43 +63,48 @@
     overflow: hidden;
 }
 
+/* Estilos para la sexta figura de la galería */
 .grid-galeria figure:nth-child(6) {
-    grid-column: span 2;
+    grid-column: span 2; /* Ocupa dos columnas */
 }
 
+/* Media query para pantallas de hasta 900px de ancho */
 @media screen and (max-width: 900px) {
     .grid-galeria figure:nth-child(6),
     .grid-galeria figure:nth-child(7) {
-        grid-column: span 3;
+        grid-column: span 3; /* Ocupan tres columnas */
     }
     .grid-galeria figure:nth-child(2),
     .grid-galeria figure:nth-child(8),
     .grid-galeria figure:nth-child(10) {
-        grid-column: span 2;
+        grid-column: span 2; /* Ocupan dos columnas */
     }
 }
 
+/* Media query para pantallas de hasta 768px de ancho */
 @media screen and (max-width: 768px) {
     .grid-galeria figure:nth-child(4),
     .grid-galeria figure:nth-child(6) {
-        grid-column: span 2;
+        grid-column: span 2; /* Ocupan dos columnas */
     }
 }
 
+/* Media query para pantallas de hasta 480px de ancho */
 @media screen and (max-width: 480px) {
     .grid-galeria figure:nth-child(3),
     .grid-galeria figure:nth-child(4),
     .grid-galeria figure:nth-child(7) {
-        grid-column: span 2;
+        grid-column: span 2; /* Ocupan dos columnas */
     }
     .grid-galeria figure:nth-child(2),
     .grid-galeria figure:nth-child(6),
     .grid-galeria figure:nth-child(8),
     .grid-galeria figure:nth-child(10) {
-        grid-column: span 1;
+        grid-column: span 1; /* Ocupan una columna */
     }
 }
 
+/* Media query para pantallas de hasta 320px de ancho */
 @media screen and (max-width: 320px) {
     .grid-galeria figure:nth-child(2),
     .grid-galeria figure:nth-child(3),
@@ -97,6 +113,6 @@
     .grid-galeria figure:nth-child(7),
     .grid-galeria figure:nth-child(8),
     .grid-galeria figure:nth-child(10) {
-        grid-column: span 1;
+        grid-column: span 1; /* Ocupan una columna */
     }
 }

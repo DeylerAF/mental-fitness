@@ -1,35 +1,50 @@
+/* Estilos para la sección de contacto */
 .contacto {
     padding: 2rem;
     justify-content: space-between;
     align-items: center;
 }
+/* Estilos para el contacto en pantallas muy pequeñas */
+@media only screen and (max-width: 320px){
+    .contacto {
+        flex-direction: column;
+    }
+}
 
+/* Estilos para los elementos del formulario de contacto */
 .contacto .contact-form .form-group{
     margin: 1rem 0;
 }
 
+/* Estilos para el formulario de contacto y la información de contacto */
 .contacto .contact-form, .info-contacto-footer{
     width: 100%;
 }
 
+/* Estilos para el botón del formulario de contacto */
 .contacto .contact-form button {
     cursor: pointer;
     background: var(--primary-color);
     color: var(--background-color);
     width: 50%;
+    max-width: 150px;
     height: 40px;
     border-radius: 8px;
 }
 
+/* Estilos para el botón del formulario de contacto al pasar el cursor sobre él */
 .contacto .contact-form button:hover {
     background: var(--primary-color-semi-transparent);
     color: var(--font-color);
 }
 
+/* Estilos para los elementos de entrada de datos */
 .wrapper .input-data{
     width: 100%;
     position: relative;
 }
+
+/* Estilos para el área de texto y los campos de entrada de datos */
 .wrapper .input-data textarea,
 .wrapper .input-data input{
     height: 100%;
@@ -38,6 +53,7 @@
     border-bottom: 1px solid var(--secondary-color);
 }
 
+/* Estilos para la línea debajo de los campos de entrada de datos */
 .wrapper .input-data .underline{
     position: absolute;
     bottom: 0;
@@ -45,10 +61,12 @@
     width: 100%;
 }
 
+/* Estilos para la línea debajo del área de texto */
 .wrapper .input-data .underline-textarea{
     transform: translateY(-5px);
 }
 
+/* Estilos para la línea debajo de los campos de entrada de datos antes de que se enfoquen */
 .wrapper .input-data .underline::before{
     position: absolute;
     content: "";
@@ -59,12 +77,14 @@
     transition: transform 0.3s ease;
 }
 
+/* Estilos para la línea debajo de los campos de entrada de datos después de que se enfoquen */
 .input-data textarea:focus ~ .underline::before,
 .input-data input:focus ~ .underline::before,
 .input-data input:valid ~ .underline::before {
     transform: scaleX(1);
 }
 
+/* Estilos para los campos de entrada de datos */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -74,18 +94,27 @@ textarea {
     outline: none;
 }
 
+/* Este código agrega un margen a la sección de información de contacto en el footer */
+.contacto .info-contacto-footer{
+    margin: 1rem;
+    max-width: -webkit-fill-available;
+}
+
+/* Estilos para los iconos de redes sociales en la sección de contacto */
 .contacto .info-contacto-footer .redes-contacto{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Estilos para los enlaces de redes sociales en la sección de contacto */
 .contacto .info-contacto-footer a{
     font-size: var(--x-small-font-size);
     color: var(--primary-color);
     text-align: center;
 }
 
+/* Estilos para el texto de información de contacto en la sección de contacto */
 .contacto .info-contacto-footer p{
     font-size: var(--x-small-font-size);
     color: var(--primary-color);
