@@ -1,0 +1,102 @@
+.nosotros {
+    background: var(--secondary-color);
+    text-align: center;
+}
+
+.grid-galeria {
+    padding: 2rem;
+    grid-template-columns: repeat(4, minmax(auto , 1fr));
+    grid-auto-rows: minmax(auto, 300px);
+}
+@media screen and (max-width: 900px) {
+    .grid-galeria {
+        grid-template-columns: repeat(3, minmax(auto , 1fr));
+        grid-auto-rows: minmax(auto, 250px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .grid-galeria {
+        grid-template-columns: repeat(2, minmax(auto , 1fr));
+        grid-auto-rows: minmax(auto, 200px);
+    }
+}
+@media screen and (max-width: 320px) {
+    .grid-galeria {
+        grid-template-columns: repeat(1, minmax(auto , 1fr));
+        grid-auto-rows: minmax(auto, 150px);
+    }
+}
+
+.grid-galeria figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-galeria figure:hover::before {
+    position: absolute;
+    content: "MÁS";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color-semi-transparent);
+    color: #fff;
+}
+
+.grid-galeria figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.grid-galeria figure:nth-child(6) {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 900px) {
+    .grid-galeria figure:nth-child(6),
+    .grid-galeria figure:nth-child(7) {
+        grid-column: span 3;
+    }
+    .grid-galeria figure:nth-child(2),
+    .grid-galeria figure:nth-child(8),
+    .grid-galeria figure:nth-child(10) {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-galeria figure:nth-child(4),
+    .grid-galeria figure:nth-child(6) {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-galeria figure:nth-child(3),
+    .grid-galeria figure:nth-child(4),
+    .grid-galeria figure:nth-child(7) {
+        grid-column: span 2;
+    }
+    .grid-galeria figure:nth-child(2),
+    .grid-galeria figure:nth-child(6),
+    .grid-galeria figure:nth-child(8),
+    .grid-galeria figure:nth-child(10) {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .grid-galeria figure:nth-child(2),
+    .grid-galeria figure:nth-child(3),
+    .grid-galeria figure:nth-child(4),
+    .grid-galeria figure:nth-child(6),
+    .grid-galeria figure:nth-child(7),
+    .grid-galeria figure:nth-child(8),
+    .grid-galeria figure:nth-child(10) {
+        grid-column: span 1;
+    }
+}

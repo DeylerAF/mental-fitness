@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Lato Font';
+    src:
+        url('font/Lato/Lato-Black.ttf') format('ttf'),
+        url('font/Lato/Lato-Bold.ttf') format('ttf'),
+        url('font/Lato/Lato-Hairline.ttf') format('ttf'),
+        url('font/Lato/Lato-Regular.ttf') format('ttf');
+}
+
+/* ========== Variables CSS ========== */
+:root {
+    --header-height: 3em;
+
+    /* ========== Colors ========== */
+    --primary-color: #6c2d8f;
+    --primary-color-semi-transparent: #6c2d8f80;
+    --secondary-color: #63c6e4;
+    --secondary-color-semi-transparent: #63c6e480;
+    --background-color: #e6e6e6;
+    --background-color-semi-transparent: #e6e6e680;
+    --font-color: #212121;
+    --font-color-semi-transparent: #21212180;
+
+    /* ========== Font & Typography ========== */
+    --lato-font: "Lato Font", sans-serif;
+
+    /* 1rem = 10px, .5rem = 5px */
+    --xx-large-font-size: 3.6rem;
+    --x-large-font-size: 3rem;
+    --large-font-size: 2.4rem;
+    --medium-font-size: 1.8rem;
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
+    --x-small-font-size: 1.2rem;
+    --xx-small-font-size: 1rem;
+
+    /* Font Weight */
+    --thin-font-weight: 100;
+    --extra-light-font-weight: 200;
+    --light-font-weight: 300;
+    --regular-font-weight: 400;
+    --medium-font-weight: 500;
+    --semi-bold-font-weight: 600;
+    --bold-font-weight: 700;
+    --extra-bold-font-weight: 800;
+    --black-font-weight: 900;
+}
+
+/* ========== Media Queries ================= */
+/* Font Size for larger devices */
+@media screen and (max-width: 480px) {
+    :root {
+        /* 1rem = 10px, .5rem = 5px */
+        --xx-large-font-size: 3rem;
+        --x-large-font-size: 2.4rem;
+        --large-font-size: 2;
+        --medium-font-size: 1.6rem;
+        --normal-font-size: 1.4rem;
+        --small-font-size: 1.2rem;
+        --x-small-font-size: 1rem;
+        --xx-small-font-size: 0.8rem;
+    }
+}
+
+body {
+    font-family: var(--lato-font);
+    background-color: var(--background-color);
+    color: var(--font-color);
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: var(--xx-large-font-size);
+}
+
+h2 {
+    font-size: var(--large-font-size);
+    font-weight: var(--bold-font-weight);
+}
+
+h3 {
+    font-size: var(--medium-font-size);
+    font-weight: var(--semi-bold-font-weight);
+}
+
+h4 {
+    font-size: var(--normal-font-size);
+    font-weight: var(--medium-font-weight);
+}
+
+h5 {
+    font-size: var(--x-small-font-size);
+    font-weight: var(--regular-font-weight);
+}
+
+h6 {
+    font-size: var(--xx-small-font-size);
+    font-weight: var(--light-font-weight);
+}
+
+p {
+    font-size: var(--normal-font-size);
+    font-weight: var(--thin-font-weight);
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,93 @@
+.contacto {
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto .contact-form .form-group{
+    margin: 1rem 0;
+}
+
+.contacto .contact-form, .info-contacto-footer{
+    width: 100%;
+}
+
+.contacto .contact-form button {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--background-color);
+    width: 50%;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.contacto .contact-form button:hover {
+    background: var(--primary-color-semi-transparent);
+    color: var(--font-color);
+}
+
+.wrapper .input-data{
+    width: 100%;
+    position: relative;
+}
+.wrapper .input-data textarea,
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.wrapper .input-data .underline-textarea{
+    transform: translateY(-5px);
+}
+
+.wrapper .input-data .underline::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-data textarea:focus ~ .underline::before,
+.input-data input:focus ~ .underline::before,
+.input-data input:valid ~ .underline::before {
+    transform: scaleX(1);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    resize: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.contacto .info-contacto-footer .redes-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto .info-contacto-footer a{
+    font-size: var(--x-small-font-size);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.contacto .info-contacto-footer p{
+    font-size: var(--x-small-font-size);
+    color: var(--primary-color);
+    text-align: center;
+}
